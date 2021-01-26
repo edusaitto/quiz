@@ -1,5 +1,5 @@
 {
-    "bg": "https://www.pewtrusts.org/-/media/post-launch-images/2020/09/sln_sept8_1/16x9_m.jpg",
+    "bg": "https://im-media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2020-04/ap_paper.jpg?itok=pevRrI3j",
     "title": "Fake News",
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
@@ -31,12 +31,13 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#3949ab",
+        "primary": "#0064b7",
         "secondary": "#102027",
         "mainBg": "#00227b",
         "contrastText": "#FFFFFF",
         "wrong": "#ff1744",
-        "success": "#99d066"
+        "success": "#99d066",
+        "gold": "#fdd835"
       },
       "borderRadius": "4px"
     }
