@@ -2,8 +2,9 @@ import Container from '../src/components/Container'
 import BackgroundImage from '../src/components/Background'
 import QuestionWidget from '../src/components/QuestionWidget'
 import Loading from '../src/components/Loading'
+import ResultWidget from '../src/components/ResultWidget'
 import db from '../db.json'
-import { useState } from 'react'
+
 
 const screenStates = {
     LOADING: 'LOADING',
@@ -12,9 +13,17 @@ const screenStates = {
 }
 
 export default function QuizPage() {
-    const [index, setIndex] = useState(0)
+    const [index, setIndex] = React.useState(0)
     const question = db.questions[index];
     const [screenState, setScreenState] = React.useState(screenStates.LOADING)
+    const [results, setResults] = React.useState([])
+    
+    function addResult(result) {
+        setResults([
+            ...results,
+            result
+        ])
+    }
 
     React.useEffect(()=>{
         setTimeout(() => {
@@ -42,9 +51,10 @@ export default function QuizPage() {
                     question={question}
                     index={index}
                     handleSubmit={handleSubmit}
+                    addResult={addResult}
                     /> 
                 }
-                { screenState === screenStates.RESULT && <div>Você acertou X questões</div> }
+                { screenState === screenStates.RESULT && <ResultWidget results={results} index={index} /> }
             </Container>
         </BackgroundImage>
     )

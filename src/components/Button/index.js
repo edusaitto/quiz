@@ -7,6 +7,7 @@ const Button = styled.button`
     padding: 8px;
     border-radius: 6px;
     background-color: ${({theme}) => theme.colors.gold};
+    cursor: pointer;
 `
 
 export default Button

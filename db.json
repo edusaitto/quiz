@@ -7,7 +7,7 @@
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
         "title": "Você acha que essa notícia é verdadeira ou é fake news?",
         "description": "Essa é pra aquecer",
-        "answer": 2,
+        "answer": 1,
         "alternatives": [
           "Essa notícia é verdadeira!",
           "Isso aí é fake news!!!"

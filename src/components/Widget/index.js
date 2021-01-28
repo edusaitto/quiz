@@ -57,8 +57,8 @@ Widget.Topic = styled.a`
   display: block;
 
   &:hover, &:focus {
-    color: ${({ theme }) => `${theme.colors.primary}`};
-  background-color: ${({ theme }) => `${theme.colors.yellow}40`};
+    color: ${({ theme }) => `${theme.colors.contrastText}`};
+    background-color: ${({ theme }) => `${theme.colors.primary}`};
   }
 `
 
