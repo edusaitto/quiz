@@ -24,6 +24,7 @@ const NameInput = styled.input`
 const ButtonSubmit = styled.button`
     padding: 8px;
     border: none;
+    height: 50px;
     border-radius: 6px;
     background-color: ${({theme}) => theme.colors.gold};
 `

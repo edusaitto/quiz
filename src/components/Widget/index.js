@@ -57,7 +57,8 @@ Widget.Topic = styled.a`
   display: block;
 
   &:hover, &:focus {
-    opacity: .3;
+    color: ${({ theme }) => `${theme.colors.primary}`};
+  background-color: ${({ theme }) => `${theme.colors.yellow}40`};
   }
 `
 
