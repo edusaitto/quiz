@@ -3,9 +3,8 @@ import db from '../../../db.json'
 
 const Background = styled.div`
   background-image: url(${db.bg});
-  flex: 1;
+  height: 150vh;
   background-size: cover;
-  height: 110vh;
   background-position: center;
 `;
 

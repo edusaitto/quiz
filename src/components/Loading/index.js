@@ -8,7 +8,7 @@ export default function Loading() {
                 Carregando...
             </Widget.Header>
             <Widget.Content>
-                Não compartilhe fake news!
+                Obrigado por participar do Tech Quiz!
             </Widget.Content>
         </Widget>
     )

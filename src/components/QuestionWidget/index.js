@@ -1,5 +1,7 @@
 import Widget from '../Widget'
 import Button from '../Button'
+import WrongCard from '../WrongCard'
+import SuccessCard from '../SuccessCard'
 import AlternativesForm from '../AlternativesForm'
 import db from '../../../db.json'
 
@@ -40,13 +42,6 @@ export default function QuestionWidget({ question, index, handleSubmit, addResul
                 <AlternativesForm onSubmit={(e)=>{
                     e.preventDefault()
                     setFormSubmit(true)
-                    setTimeout(()=> {
-                        addResult(isCorrect)
-                        handleSubmit()
-                        setFormSubmit(false)
-                        setSelectedAlternative(undefined)
-                        setCheckedButton(false)
-                    }, 1000)
                 }}>
                     {question.alternatives.map((a, index) => {
                         const alternativeId = `alternative-${a}`
@@ -70,7 +65,7 @@ export default function QuestionWidget({ question, index, handleSubmit, addResul
                                     setCheckedButton(checkedButton)
                                 }}
                                 type="radio"
-                                checked={checkedButton}
+                                checked={formSubmit === false ? checkedButton : !checkedButton}
                             />
                             {a}
                             </Widget.Topic>
@@ -80,11 +75,51 @@ export default function QuestionWidget({ question, index, handleSubmit, addResul
                     <Button 
                         type="submit"
                         disabled={!hasAlternativeSelected}
+                        hidden={formSubmit}
                     >
-                        Confirmar
+                        CONFIRMAR
                     </Button>
-                    {formSubmit && isCorrect && <p>Você acertou!</p>}
-                    {formSubmit && !isCorrect && <p>Você errou!</p>}
+                    {formSubmit && isCorrect &&
+                        <div>
+                            <Button
+                                onClick={()=>{
+                                    setTimeout(()=> {
+                                        handleSubmit()
+                                        addResult(isCorrect)
+                                        setSelectedAlternative(undefined)
+                                        setCheckedButton(false)
+                                        setFormSubmit(false) 
+                                    }, 500)
+                                }}
+                            >
+                                PRÓXIMA
+                            </Button>
+                            <SuccessCard>
+                                <p>Você acertou!</p>
+                            </SuccessCard>
+                        </div>
+                    }
+                    {formSubmit && !isCorrect && 
+                        <div>
+                            <Button
+                                onClick={()=>{
+                                    setTimeout(()=> {
+                                        handleSubmit()
+                                        addResult(isCorrect)
+                                        setSelectedAlternative(undefined)
+                                        setCheckedButton(false)
+                                        setFormSubmit(false) 
+                                    }, 500)
+                                }}
+                            >
+                                PRÓXIMA
+                            </Button>
+                            <WrongCard>
+                                <p>Você errou! A resposta correta era a alternativa {question.answer+1}</p>
+                            </WrongCard>
+                        </div>
+                    }
+                    
                 </AlternativesForm>
             </Widget.Content>
         </Widget>

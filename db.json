@@ -1,36 +1,66 @@
 {
-    "bg": "https://im-media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2020-04/ap_paper.jpg?itok=pevRrI3j",
-    "title": "Fake News",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "bg": "https://wallpaperaccess.com/full/2454628.png",
+    "title": "TechQuiz",
+    "description": "Algumas curiosidades de tecnologia em forma de quiz!",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Você acha que essa notícia é verdadeira ou é fake news?",
-        "description": "Essa é pra aquecer",
+        "image": "https://i.gifer.com/SgXn.gif",
+        "title": "Quantos megapixels tinham as fotos registradas na primeira câmera digital do mundo?",
+        "description": "A câmera pesava 3,6 quilos, precisava de 23 segundos para que a imagem fosse registrada e mais 23 segundos para a leitura da foto ser feita.",
+        "answer": 2,
+        "alternatives": [
+          "1 megapixel",
+          "0,5 megapixel",
+          "0,01 megapixel",
+          "1,5 megapixel"
+        ]
+      },
+      {
+        "image": "https://i.gifer.com/ROzQ.gif",
+        "title": "Qual a quantidade de memória RAM presente no primeiro iPhone?",
+        "description": "O iPhone 2G foi anunciado em 2007 e revolucionou o conceito dos smartphones da sua geração.",
         "answer": 1,
         "alternatives": [
-          "Essa notícia é verdadeira!",
-          "Isso aí é fake news!!!"
+          "2GB",
+          "128MB",
+          "1GB",
+          "512MB"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "E aí? Essa notícia é verdadeira ou é fake news?",
-        "description": "Faz tempo em haha",
+        "image": "https://i.gifer.com/107Q.gif",
+        "title": "Qual marca é considerada a maior fabricante de PC's do mundo?",
+        "description": "Segundo uma pesquisa de 2019, 1 a cada 4 PCs funcionando pertencem a essa marca.",
         "answer": 0,
         "alternatives": [
-          "Essa notícia é verdadeira!",
-          "Isso aí é fake news!!!"
+          "Lenovo",
+          "Dell",
+          "HP",
+          "Acer"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "E aí? Essa notícia é verdadeira ou é fake news?",
-        "description": "Faz tempo em haha",
+        "image": "https://i.gifer.com/D4l.gif",
+        "title": "Qual a capacidade de armazenamento do computador mais atualizado da NASA?",
+        "description": "Aitken é o supercomputador da NASA que recebeu sua última atualização em 2020 e possui preocupações ambientais, como um consumo mais baixo de eletricidade.",
+        "answer": 3,
+        "alternatives": [
+          "128TB",
+          "153TB",
+          "512TB",
+          "221TB"
+        ]
+      },
+      {
+        "image": "https://i.gifer.com/Jno.gif",
+        "title": "De qual material são feitas as baterias para os celulares de hoje em dia?",
+        "description": "A composição permite que maior energia seja armazenada e que os aparelhos tenham uma vida útil maior.",
         "answer": 0,
         "alternatives": [
-          "Essa notícia é verdadeira!",
-          "Isso aí é fake news!!!"
+          "Íons de lítio (Li-Ion)",
+          "Polímeros de lítio (Li-Po)",
+          "Níquel-cádmio (Ni-Cd)",
+          "Hidreto de níquel (Ni-MH)"
         ]
       }
     ],

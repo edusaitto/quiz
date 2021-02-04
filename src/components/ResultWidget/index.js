@@ -1,4 +1,34 @@
 import Widget from '../Widget'
+import styled from 'styled-components'
+
+const ListResultOk = styled.li`
+    padding: 8px;
+    margin: 8px;
+    border-radius: ${({ theme }) => theme.borderRadius};
+    background-color: ${({theme}) => theme.colors.success};
+`
+
+const ListResultWrong = styled.li`
+    padding: 8px;
+    margin: 8px;
+    border-radius: ${({ theme }) => theme.borderRadius};
+    background-color: ${({theme}) => theme.colors.wrong};
+`
+
+function ListFunction({ result, index }) {
+    if (result === true)
+    return (
+        <ListResultOk>
+            Questão {index+1}: Acertou!
+        </ListResultOk>
+    )
+    else
+    return (
+        <ListResultWrong>
+            Questão {index+1}: Errou :(
+        </ListResultWrong>
+    )
+}
 
 export default function ResultWidget({ results, index }) {
     return (
@@ -14,15 +44,15 @@ export default function ResultWidget({ results, index }) {
                         return somatoria + 1
                     } 
                     return somatoria
-                }, 0)} questões</h4>
+                }, 0)} de 5 questões</h4>
                 <ul>
                     {results.map((result, index) => (
-                        <li>
-                            Questão #{index+1}:
+                        <ListFunction result={result} index={index}>
                             {result === true ? " Acertou" : " Errou"}
-                        </li>
+                        </ListFunction>
                     ))}
                 </ul>
+                <h1>Obrigado por participar do meu Tech Quiz! Se tiver algum feedback eu adoraria ouvir :)</h1>
             </Widget.Content>
         </Widget>
     )
